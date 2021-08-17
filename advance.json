@@ -1,0 +1,50 @@
+[
+  {
+    "primary": "#F8561E",
+    "primary_light": "#FEE9E1",
+    "primary_dark": "#C64616",
+    "secondary": "#D5DBE5",
+    "secondary_light": "#F3F3F5",
+    "secondary_dark": "#E9E9E9",
+    "primary_text": "#484F58",
+    "secondary_text": "#A6ACB5",
+    "accent": "#FECB2E",
+    "design_link": "https://dribbble.com/shots/15594060-Pop-Fashion-App"
+  },
+  {
+    "primary": "#1C3051",
+    "primary_light": "#E8EEEE",
+    "primary_dark": "#1C3051",
+    "secondary": "#FCB745",
+    "secondary_light": "#F6F1EC",
+    "secondary_dark": "#D47649",
+    "primary_text": "#3F4448",
+    "secondary_text": "#A4A6A8",
+    "accent": "#CF9C81",
+    "design_link": "https://dribbble.com/shots/15909745-Medicine-Reminder-App"
+  },
+  {
+    "primary": "#2043FC",
+    "primary_light": "#B5BFFD",
+    "primary_dark": "#282DAE",
+    "secondary": "#FBA61E",
+    "secondary_light": "#FCDDB3",
+    "secondary_dark": "#D18100",
+    "primary_text": "#373736",
+    "secondary_text": "#D0D0D0",
+    "accent": "#CF2261",
+    "design_link": "https://www.behance.net/gallery/105452327/Mobile-banking-system-app/modules/605349639"
+  },
+  {
+    "primary": "#578067",
+    "primary_light": "#D7DCD5",
+    "primary_dark": "#97AB97",
+    "secondary": "#F86853",
+    "secondary_light": "#F8C5C5",
+    "secondary_dark": "#F89848",
+    "primary_text": "#F86853",
+    "secondary_text": "#147BF9",
+    "accent": "#A1A1A5",
+    "design_link": "https://www.behance.net/gallery/119015137/Bite-app-UI-Design/modules/677678547"
+  }
+]

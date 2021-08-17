@@ -1,0 +1,66 @@
+[
+  {
+    "primary": "#F8561E",
+    "secondary": "#D5DBE5",
+    "primary_text": "#484F58",
+    "secondary_text": "#A6ACB5",
+    "accent": "#FECB2E",
+    "design_link": "https://dribbble.com/shots/15594060-Pop-Fashion-App"
+  },
+  {
+    "primary": "#348663",
+    "secondary": "#244135",
+    "primary_text": "#141B17",
+    "secondary_text": "#787B79",
+    "accent": "#FFC246",
+    "design_link": "https://dribbble.com/shots/14399250-Plant-care-app-concept/attachments/6073201?mode=media"
+  },
+  {
+    "primary": "#1C3051",
+    "secondary": "#FCB745",
+    "primary_text": "#3F4448",
+    "secondary_text": "#A4A6A8",
+    "accent": "#CF9C81",
+    "design_link": "https://dribbble.com/shots/15909745-Medicine-Reminder-App"
+  },
+  {
+    "primary": "#006B35",
+    "secondary": "#FCFFE1",
+    "primary_text": "#FCFFE1",
+    "secondary_text": "#000100",
+    "accent": "#FF6915",
+    "design_link": "https://dribbble.com/shots/10083589-Hotel-Riviera"
+  },
+  {
+    "primary": "#628569",
+    "secondary": "#B1BBA6",
+    "primary_text": "#242423",
+    "secondary_text": "#FEF2DF",
+    "accent": "#8A5B3B",
+    "design_link": "https://dribbble.com/shots/14598035-Mobile-App-Design/attachments/6289800?mode=media"
+  },
+  {
+    "primary": "#436E51",
+    "secondary": "#EAF4EE",
+    "primary_text": "#01230D",
+    "secondary_text": "#9BA09C",
+    "accent": "#77B635",
+    "design_link": "https://dribbble.com/shots/14663745-Plant-Store-App"
+  },
+  {
+    "primary": "#81D0C5",
+    "secondary": "#FB9B97",
+    "primary_text": "#0C3656",
+    "secondary_text": "#C1C1C1",
+    "accent": "#225072",
+    "design_link": "https://dribbble.com/shots/7614386-medicine-reminder"
+  },
+  {
+    "primary": "#FD9352",
+    "secondary": "#E2E5ED",
+    "primary_text": "#515577",
+    "secondary_text": "#B5B8C1",
+    "accent": "#FFDC95",
+    "design_link": "https://dribbble.com/shots/8297569-Art-Prints-Shopping-App"
+  }
+]

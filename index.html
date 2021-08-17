@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- IBM Plex Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <audio id="picker" src="sounds/picker.m4a" autoplay="false"></audio>
+
+  <nav class="navbar sticky-top">
+    <div class="container-fluid">
+      <div class="navbar-brand" >
+        <img src="img/copy.svg" alt="UI palette logo" height="30" class="d-inline-block align-text-top">
+        UIpalette
+      </div>
+    </div>
+  </nav>
+
+  <section class="container-fluid">
+    <div class="col-12 col-md-5  mt-5 mb-5">
+      <h3 class="bold">UI Palette is an open-source tool for discovering new color schemes </h3>
+      <p>Created to get the best combinations of primary, secondary and accent colors from the best designers around the web.</p>
+    </div>
+  </section>
+
+  <div id="filterNav" class="pt-3 pb-3">
+    <div class="container-fluid">
+      <button id="monoBtn" class="btn tab filter-active me-4" onclick="activeTab(this); getMonoPalette();">Mono</button>
+      <button id="duoBtn" class="btn tab me-4" onclick="activeTab(this); getDuoPalette();">Duo</button>
+      <button id="advBtn" class="btn tab me-4" onclick="activeTab(this); getAdvancePalette();">Advanced</button>
+      <button id="gradBtn" class="btn tab me-4" onclick="activeTab(this); getGradients();">Gradients</button>
+    </div>
+  </div>
+
+  <div id="gradientFilters" class="pt-2 pb-2">
+    <div class="container-fluid">
+      <button class="btn ">one</button>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div id="paletteList" class="row g-4">
+      <!-- All palettes appear here -->
+    </div>
+  </div>
+
+  <footer class="pt-5 pb-2 text-center">
+    <p class="small text-opacity-50">Made with love and code by <a class="badge rounded-pill bg-secondary text-decoration-none" href="https://fabiomonzani.com" target="_blank">Fabio Monzani</a></p>
+  </footer>
+
+  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="2500">
+      <div class="d-flex align-items-center">
+        <div id="toastColor" class="rounded toast-color"></div>
+        <div class="toast-body">
+          <p id="toastText" class="m-0">Color copied to clipboard</p>
+         </div>
+       </div>
+    </div>
+  </div>
+
+  <!-- Gradient CSS code modal -->
+  <div class="modal fade" id="gradientCssModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">CSS code</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="card-body card-code">
+              <pre><code id="gradientCssCode">Error</code></pre>
+            </div>
+        </div>
+        <div class="modal-footer d-grid mx-auto">
+          <button type="button" class="btn btn-primary">Copy code & close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <!-- Bootstrap Stuff -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- Clipboard JS -->
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script>
+    <!-- Image management -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.js" integrity="sha512-UNbeFrHORGTzMn3HTt00fvdojBYHLPxJbLChmtoyDwB6P9hX5mah3kMKm0HHNx/EvSPJt14b+SlD8xhuZ4w9Lg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Clipboard JS -->
+    <script src="js/copyClipboard.js"></script>
+    <!-- Save and download palette -->
+    <script src="js/savePalette.js"></script>
+    <!-- Load palette parsers -->
+    <script src="js/getMonoPalette.js"></script>
+    <script src="js/getDuoPalette.js"></script>
+    <script src="js/getAdvancePalette.js"></script>
+    <script src="js/getGradients.js"></script>
+
+    <script src="js/getGradientCssCode.js"></script>
+
+  <script>
+    $(document).ready(function(){
+      var storedView = sessionStorage.getItem('view');
+      console.log(storedView);
+      if (storedView == 'mono') {
+        getMonoPalette();
+      } else if (storedView == 'duo') {
+        getDuoPalette();
+      } else if (storedView == 'advance') {
+        getAdvancePalette();
+      } else {
+        getGradients();
+      }
+    }
+    );
+
+    //Tab script
+    function activeTab(e) {
+      $(".tab").removeClass("filter-active");
+      $(e).addClass("filter-active");
+    }
+
+    //Initialise Toast notification
+    var toastLiveExample = document.getElementById('liveToast')
+    var toast = new bootstrap.Toast(toastLiveExample)
+
+  </script>
+</body>
+</html>
