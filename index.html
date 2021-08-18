@@ -57,7 +57,8 @@
     <p class="small text-opacity-50">Made with love and code by <a class="badge rounded-pill bg-secondary text-decoration-none" href="https://fabiomonzani.com" target="_blank">Fabio Monzani</a></p>
   </footer>
 
-  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 9999">
+  <!-- Popup toast notification -->
+  <div id="toast-wrapper" class="position-fixed bottom-0 end-0 p-3" style="z-index: -1;">
     <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="2500">
       <div class="d-flex align-items-center">
         <div id="toastColor" class="rounded toast-color"></div>
@@ -88,24 +89,7 @@
     </div>
   </div>
 
-  <!-- Mono experiment modal -->
-  <div class="modal fade" id="monoExperimentalModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Test palette</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-
-        </div>
-        <div class="modal-footer d-grid mx-auto">
-          
-        </div>
-      </div>
-    </div>
-  </div>
-
+  <div id="modalHere"></div>
 
     <!-- Bootstrap Stuff -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
@@ -125,29 +109,15 @@
     <script src="js/getAdvancePalette.js"></script>
     <script src="js/getGradients.js"></script>
 
+    <script src="js/storedView.js"></script>
+
     <script src="js/getGradientCssCode.js"></script>
+    <script src="js/getMonoTest.js"></script>
 
   <script>
     $(document).ready(function(){
-      var storedView = sessionStorage.getItem('view');
-      console.log(storedView);
-      if (storedView == 'mono') {
-        $(".tab").removeClass("filter-active");
-        $('#monoBtn').addClass("filter-active");
-        getMonoPalette();
-      } else if (storedView == 'duo') {
-        $(".tab").removeClass("filter-active");
-        $('#duoBtn').addClass("filter-active");
-        getDuoPalette();
-      } else if (storedView == 'advance') {
-        $(".tab").removeClass("filter-active");
-        $('#advBtn').addClass("filter-active");
-        getAdvancePalette();
-      } else if (storedView == 'gradients') {
-        $(".tab").removeClass("filter-active");
-        $('#gradBtn').addClass("filter-active");
-        getGradients();
-      }
+      $('#modalHere').load('monoModal.html')
+      storedView();
     }
     );
 
