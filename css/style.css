@@ -98,7 +98,11 @@ PALETTE CARD
 /* =============================================================================
 MODAL
 ============================================================================= */
+.modal-dialog {
+  justify-content: center;
+}
 .modal-content {
+  width: unset;
   border-radius: 24px;
 }
 .modal-header {
