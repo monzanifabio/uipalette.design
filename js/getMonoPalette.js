@@ -19,6 +19,7 @@ function getMonoPalette() {
       icon += '</div>';
       icon += '</div>';
       icon += '<div class="d-flex justify-content-end">';
+      icon += '<button class="btn btn-light" onclick="savePalette"><img src="img/test.svg" height="18"></button>'
       icon += '<a href="' + value.design_link + '" class="btn btn-light" target="_blank"><img src="img/link.svg" height="18"></a>';
       icon += '<button class="btn btn-light" onclick="savePalette(palette'+ palette +')"><img src="img/download.svg" height="18"></button>';
       icon += '</div>';
