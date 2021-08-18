@@ -18,5 +18,9 @@ function storedView() {
     $(".tab").removeClass("filter-active");
     $('#gradBtn').addClass("filter-active");
     getGradients();
+  } else {
+    $(".tab").removeClass("filter-active");
+    $('#monoBtn').addClass("filter-active");
+    getMonoPalette()
   }
 }
