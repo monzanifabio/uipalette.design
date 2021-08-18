@@ -10,6 +10,7 @@ clipboard.on('success', function(e) {
     sound.play();
     //Show toast notification
     toast.show()
+    $('#toast-wrapper').css("z-index", 9999);
     $('#toastColor').css("display", 'block');
     $('#toastColor').css("backgroundColor", e.text);
     $('#toastText').text(e.text + " copied to clipboard");
@@ -33,6 +34,7 @@ clipboard.on('success', function(e) {
     sound.play();
     //Show toast notification
     toast.show()
+    $('#toast-wrapper').css("z-index", 9999);
     $('#toastColor').css("display", 'none');
     $('#toastText').text("CSS code copied to clipboard");
     $('#gradientCssModal').modal('hide');
