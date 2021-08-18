@@ -102,7 +102,7 @@ MODAL
   justify-content: center;
 }
 .modal-content {
-  width: unset;
+  width: 100%;
   border-radius: 24px;
 }
 .modal-header {
