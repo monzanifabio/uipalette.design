@@ -70,5 +70,21 @@
     "secondary_text": "#6E6E6E",
     "accent": "#000000",
     "design_link": "https://www.behance.net/gallery/123705179/MOBILE-UI-KIT?tracking_source=search_projects_recommended%7Cdark%20ui%20design"
+  },
+  {
+    "primary": "#578067",
+    "secondary": "#F1CBB6",
+    "primary_text": "#182C2B",
+    "secondary_text": "#C7BAA9",
+    "accent": "#F8ECE0",
+    "design_link": "https://www.behance.net/gallery/98450079/Plantery-Hydroponic-Care-App?tracking_source=search_projects_recommended%7Cblue%20ui%20design"
+  },
+  {
+    "primary": "#FFB31C",
+    "secondary": "#FE5402",
+    "primary_text": "#000000",
+    "secondary_text": "#F5F5F5",
+    "accent": "#6582FF",
+    "design_link": "https://www.behance.net/gallery/123310229/Beerogy-mobile-app-design-development?tracking_source=search_projects_recommended%7Cblue%20ui%20design"
   }
 ]
