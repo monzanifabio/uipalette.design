@@ -120,6 +120,7 @@
 
   <script>
     $(document).ready(function(){
+      $.ajaxSetup({ cache: false });
       $('#modalHere').load('monoModal.html')
       storedView();
     }
