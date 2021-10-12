@@ -1,0 +1,24 @@
+{
+  "name": "uipalette",
+  "version": "1.0.0",
+  "description": "Public repo for uidesign.palette",
+  "main": "index.html",
+  "scripts": {
+    "build": "purgecss -c purgecss.config.js -o css && cssnano css/style.css css/style.min.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/monzanifabio/uipalette.design.git"
+  },
+  "author": "Fabio Monzani",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/monzanifabio/uipalette.design/issues"
+  },
+  "homepage": "https://github.com/monzanifabio/uipalette.design#readme",
+  "dependencies": {
+    "cssnano-cli": "^1.0.5",
+    "purgecss": "^4.0.3"
+  }
+}
