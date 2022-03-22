@@ -28,6 +28,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 
+  <title>UIpalette - palettes and gradients for UI designers</title>
+
 </head>
 
 <body>
@@ -51,10 +53,10 @@
 
   <div id="filterNav" class="pt-3 pb-3">
     <div class="container-fluid d-flex">
-      <button id="monoBtn" class="btn tab filter-active me-4" onclick="activeTab(this); getMonoPalette();">Mono</button>
-      <button id="duoBtn" class="btn tab me-4" onclick="activeTab(this); getDuoPalette();">Duo</button>
-      <button id="advBtn" class="btn tab me-4" onclick="activeTab(this); getAdvancePalette();">Advanced</button>
-      <button id="gradBtn" class="btn tab me-4" onclick="activeTab(this); getGradients();">Gradients</button>
+      <button id="monoBtn" name="mono-button" class="btn tab filter-active me-4" onclick="activeTab(this); getMonoPalette();">Mono</button>
+      <button id="duoBtn" name="duo-button" class="btn tab me-4" onclick="activeTab(this); getDuoPalette();">Duo</button>
+      <button id="advBtn" name="advance-button" class="btn tab me-4" onclick="activeTab(this); getAdvancePalette();">Advanced</button>
+      <button id="gradBtn" name="gradient-button" class="btn tab me-4" onclick="activeTab(this); getGradients();">Gradients</button>
     </div>
   </div>
 
@@ -92,7 +94,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title">CSS code</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" name="close-modal" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <div class="card-body card-code">
@@ -100,7 +102,7 @@
           </div>
         </div>
         <div class="modal-footer d-grid mx-auto">
-          <button type="button" class="btn filter-active copyCss" data-clipboard-target="#gradientCssCode">Copy code & close</button>
+          <button type="button" name="copy-css" class="btn filter-active copyCss" data-clipboard-target="#gradientCssCode">Copy code & close</button>
         </div>
       </div>
     </div>
@@ -133,6 +135,10 @@
   <script src="js/getMonoTest.js"></script>
 
   <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js');
+    }
+
     $(document).ready(function() {
       $.ajaxSetup({
         cache: false

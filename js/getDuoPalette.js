@@ -21,8 +21,8 @@ function getDuoPalette() {
       icon += '</div>';
       icon += '</div>';
       icon += '<div class="d-flex justify-content-end">';
-      icon += '<a href="' + value.design_link + '" class="btn btn-light" target="_blank"><img src="img/link.svg" height="18"></a>';
-      icon += '<button class="btn btn-light" onclick="savePalette(palette'+ palette +')"><img src="img/download.svg" height="18"></button>';
+      icon += '<a href="' + value.design_link + '" class="btn btn-light" target="_blank"><img src="img/link.svg" height="18" alt="palette-link"></a>';
+      icon += '<button name="save-palette" class="btn btn-light" onclick="savePalette(palette'+ palette +')"><img src="img/download.svg" height="18" alt="download palette"></button>';
       icon += '</div>';
       icon += '</div>';
     });

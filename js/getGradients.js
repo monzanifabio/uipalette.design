@@ -19,8 +19,8 @@ function getGradients() {
       icon += '</div>';
       icon += '</div>';
       icon += '<div class="d-flex justify-content-end">';
-      icon += '<button class="btn btn-light" onclick="getGradientCssCode(this);" data-a="' + value.a + '" data-b="' + value.b + '"><img src="img/css.svg" height="18"></button>';
-      icon += '<button class="btn btn-light" onclick="savePalette(palette'+ palette +')"><img src="img/download.svg" height="18"></button>';
+      icon += '<button name="get-css" class="btn btn-light" onclick="getGradientCssCode(this);" data-a="' + value.a + '" data-b="' + value.b + '"><img src="img/css.svg" height="18" alt="get css icon"></button>';
+      icon += '<button name="save-palette" class="btn btn-light" onclick="savePalette(palette'+ palette +')"><img src="img/download.svg" height="18" alt="download gradient icon"></button>';
       icon += '</div>';
       icon += '</div>';
     });

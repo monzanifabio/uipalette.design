@@ -25,8 +25,8 @@ function (data) {
     icon += '</div>';
     icon += '</div>';
     icon += '<div class="d-flex justify-content-end">';
-    icon += '<a href="' + value.design_link + '" class="btn" target="_blank"><img src="img/link.svg" height="18"></a>';
-    icon += '<button class="btn" onclick="savePalette(palette'+ palette +')"><img src="img/download.svg" height="18"></button>';
+    icon += '<a href="' + value.design_link + '" class="btn" target="_blank"><img src="img/link.svg" height="18" alt="palette link icon"></a>';
+    icon += '<button name="save-palette" class="btn" onclick="savePalette(palette'+ palette +')"><img src="img/download.svg" height="18" alt="download palette icon"></button>';
     icon += '</div>';
     icon += '</div>';
 

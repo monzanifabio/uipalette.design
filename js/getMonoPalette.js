@@ -19,9 +19,9 @@ function getMonoPalette() {
       icon += '</div>';
       icon += '</div>';
       icon += '<div class="d-flex justify-content-end">';
-      icon += '<button class="btn btn-light" onclick="getMonoTest(this)" data-a="' + value.primary + '" data-b="' + value.primary_text + '" data-c="' + value.accent + '"><img src="img/test.svg" height="18"></button>'
-      icon += '<a href="' + value.design_link + '" class="btn btn-light" target="_blank"><img src="img/link.svg" height="18"></a>';
-      icon += '<button class="btn btn-light" onclick="savePalette(palette'+ palette +')"><img src="img/download.svg" height="18"></button>';
+      icon += '<button name="test-palette" class="btn btn-light" onclick="getMonoTest(this)" data-a="' + value.primary + '" data-b="' + value.primary_text + '" data-c="' + value.accent + '"><img src="img/test.svg" height="18" alt="test palette icon"></button>'
+      icon += '<a href="' + value.design_link + '" class="btn btn-light" target="_blank"><img src="img/link.svg" height="18" alt="palette link icon"></a>';
+      icon += '<button name="save-palette" class="btn btn-light" onclick="savePalette(palette'+ palette +')"><img src="img/download.svg" height="18" alt="download palette icon"></button>';
       icon += '</div>';
       icon += '</div>';
     });
