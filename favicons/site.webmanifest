@@ -1,7 +1,7 @@
 {
     "name": "UIPalette",
     "short_name": "UIPalette",
-    "start_url": "index.html",
+    "start_url": "../index.html",
     "icons": [
         {
             "src": "android-chrome-192x192.png",
