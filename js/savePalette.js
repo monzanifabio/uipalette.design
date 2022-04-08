@@ -3,6 +3,6 @@ function savePalette(palette){
   var savePalette = palette.id
   domtoimage.toBlob(document.getElementById(savePalette))
     .then(function (blob) {
-        window.saveAs(blob, 'palette.png');
+        window.saveAs(blob, 'uipalette-image.png');
     });
 };
