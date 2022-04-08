@@ -1,7 +1,7 @@
 function getAdvancePalette() {
   sessionStorage.setItem('view', 'advance');
   $("html, body").animate({ scrollTop: 0 }, "fast");
-$.getJSON("advance.json",
+$.getJSON("./data/advance.json",
 function (data) {
   var icon = '';
   var palette = 0;

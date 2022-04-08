@@ -1,7 +1,7 @@
 function getMonoPalette() {
   sessionStorage.setItem('view', 'mono');
   $("html, body").animate({ scrollTop: 0 }, "fast");
-  $.getJSON("mono.json",
+  $.getJSON("./data/mono.json",
   function (data) {
     var icon = '';
     var palette = 0;

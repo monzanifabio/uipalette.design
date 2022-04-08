@@ -1,7 +1,7 @@
 function getGradients() {
   sessionStorage.setItem('view', 'gradients');
   $("html, body").animate({ scrollTop: 0 }, "fast");
-  $.getJSON("gradients.json",
+  $.getJSON("./data/gradients.json",
   function (data) {
     var icon = '';
     var palette = 0;

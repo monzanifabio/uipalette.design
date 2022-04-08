@@ -1,7 +1,7 @@
 function getDuoPalette() {
   sessionStorage.setItem('view', 'duo');
   $("html, body").animate({ scrollTop: 0 }, "fast");
-  $.getJSON("duotone.json",
+  $.getJSON("./data/duotone.json",
   function (data) {
     var icon = '';
     var palette = 0;
