@@ -18,7 +18,11 @@ function storedView() {
     $(".tab").removeClass("filter-active");
     $('#gradBtn').addClass("filter-active");
     getGradients();
-  } else {
+  } else if (storedView == 'meshes') {
+    $(".tab").removeClass("filter-active");
+    $('#meshBtn').addClass("filter-active");
+    getMeshes();
+  }else {
     $(".tab").removeClass("filter-active");
     $('#monoBtn').addClass("filter-active");
     getMonoPalette()

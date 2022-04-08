@@ -20,7 +20,7 @@
   <link rel="shortcut icon" href="favicons/favicon.ico">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="msapplication-config" content="favicons/browserconfig.xml">
-  <meta name="theme-color" content="#ffffff">
+  <meta name="theme-color" content="#f4f4f4">
 
   <!-- Bootstrap CSS -->
   <link href="vendors/bootstrap-5.1.3/css/bootstrap.min.css" rel="stylesheet">
@@ -59,6 +59,7 @@
       <button id="duoBtn" name="duo-button" class="btn tab me-4" onclick="activeTab(this); getDuoPalette();">Duo</button>
       <button id="advBtn" name="advance-button" class="btn tab me-4" onclick="activeTab(this); getAdvancePalette();">Advanced</button>
       <button id="gradBtn" name="gradient-button" class="btn tab me-4" onclick="activeTab(this); getGradients();">Gradients</button>
+      <button id="meshBtn" name="meshes-button" class="btn tab me-4" onclick="activeTab(this); getMeshes();">Mesh gradients</button>
     </div>
   </div>
 
@@ -110,11 +111,26 @@
     </div>
   </div>
 
+  <!-- Mesh Grafient modal -->
+  <div class="modal fade" id="meshModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header h-100 p-0">
+          <div id="meshModalBody" class="card-body h-100"></div>
+          <button type="button" name="close-modal" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="position: absolute;top: 20px;right: 20px;"></button>
+        </div>
+        <!-- <div class="modal-body p-0">
+        </div> -->
+      </div>
+    </div>
+  </div>
+
+
   <div id="modalHere"></div>
 
   <!-- Bootstrap Stuff -->
   <script src="vendors/bootstrap-5.1.3/js/bootstrap.bundle.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="vendors/jquery-3.6.0.min.js"></script>
   <!-- Clipboard JS -->
   <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script>
   <!-- Image management -->
@@ -130,10 +146,12 @@
   <script src="js/getDuoPalette.js"></script>
   <script src="js/getAdvancePalette.js"></script>
   <script src="js/getGradients.js"></script>
+  <script src="js/getMeshes.js"></script>
 
   <script src="js/storedView.js"></script>
 
   <script src="js/getGradientCssCode.js"></script>
+  <script src="js/getMeshCssCode.js"></script>
   <script src="js/getMonoTest.js"></script>
 
   <script>
