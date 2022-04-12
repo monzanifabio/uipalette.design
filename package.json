@@ -4,6 +4,7 @@
   "description": "Public repo for uidesign.palette",
   "main": "index.html",
   "scripts": {
+    "start": "watch-http-server ./ -o -a 0.0.0.0",
     "build": "cssnano css/style.css css/style.min.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,6 +20,7 @@
   "homepage": "https://github.com/monzanifabio/uipalette.design#readme",
   "dependencies": {
     "cssnano-cli": "^1.0.5",
-    "purgecss": "^4.0.3"
+    "purgecss": "^4.0.3",
+    "watch-http-server": "^0.7.6"
   }
 }
